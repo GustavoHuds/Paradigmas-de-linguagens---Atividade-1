@@ -1,0 +1,21 @@
+# Saída da compilação
+out/
+bin/
+build/
+target/
+*.class
+
+# IDEs
+.idea/
+*.iml
+.vscode/*
+!.vscode/settings.json
+.settings/
+.project
+.classpath
+nbproject/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
