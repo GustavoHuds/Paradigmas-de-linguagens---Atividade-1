@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1230" height="670" viewBox="0 0 1230 670">
+  <style>
+    .fundo  { fill: #0E0F10; }
+    .caixa  { fill: #15171A; stroke: #3A4047; stroke-width: 1.2; }
+    .topo   { fill: #1B1E22; }
+    .div    { stroke: #3A4047; stroke-width: 1.2; }
+    .nome   { font-family: Bahnschrift, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif; font-size: 15px; font-weight: 700; fill: #E4DFD4; }
+    .nomeExc{ font-family: Bahnschrift, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif; font-size: 14px; font-weight: 700; fill: #E4DFD4; }
+    .este   { font-family: Bahnschrift, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif; font-size: 11px; letter-spacing: 1.2px; fill: #D9A441; }
+    .membro { font-family: Consolas, 'DejaVu Sans Mono', 'Courier New', monospace; font-size: 12.5px; fill: #B9B4A9; }
+    .abst   { font-style: italic; fill: #D9A441; }
+    .estat  { text-decoration: underline; }
+    .linha  { stroke: #8A867D; stroke-width: 1.4; fill: none; }
+    .trac   { stroke: #8A867D; stroke-width: 1.4; fill: none; stroke-dasharray: 6 4; }
+    .tri    { fill: #0E0F10; stroke: #8A867D; stroke-width: 1.4; }
+    .diam   { fill: #8A867D; }
+    .rot    { font-family: Bahnschrift, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif; font-size: 11.5px; fill: #9C978C; }
+    .leg    { font-family: Bahnschrift, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif; font-size: 12.5px; fill: #9C978C; }
+    .legT   { font-family: Bahnschrift, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif; font-size: 10.5px; letter-spacing: 1.6px; fill: #625F59; }
+    .pac    { font-family: Bahnschrift, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif; font-size: 10.5px; letter-spacing: 1.4px; fill: #625F59; }
+  </style>
+
+  <rect class="fundo" x="0" y="0" width="1230" height="670"/>
+
+  <!-- ============ Exceções ============ -->
+  <text class="pac" x="40" y="26">ESTOQUE.EXCECOES</text>
+
+  <!-- Exception (java.lang) -->
+  <rect class="caixa" x="40" y="40" width="300" height="36"/>
+  <text class="nomeExc" x="190" y="63" text-anchor="middle" style="fill:#9C978C">java.lang.Exception</text>
+  <!-- herança: EstoqueException -> Exception -->
+  <line class="linha" x1="190" y1="90" x2="190" y2="130"/>
+  <polygon class="tri" points="190,76 181,90 199,90"/>
+
+  <rect class="caixa" x="40" y="130" width="300" height="36"/>
+  <text class="nomeExc" x="190" y="153" text-anchor="middle">EstoqueException</text>
+
+  <!-- herança: específicas -> EstoqueException -->
+  <polygon class="tri" points="70,166 61,180 79,180"/>
+  <line class="linha" x1="70" y1="180" x2="70" y2="305"/>
+  <line class="linha" x1="70" y1="238" x2="100" y2="238"/>
+  <line class="linha" x1="70" y1="305" x2="100" y2="305"/>
+
+  <rect class="caixa" x="100" y="220" width="280" height="36"/>
+  <text class="nomeExc" x="240" y="243" text-anchor="middle">QuantidadeInvalidaException</text>
+  <rect class="caixa" x="100" y="287" width="280" height="36"/>
+  <text class="nomeExc" x="240" y="310" text-anchor="middle">ProdutoIndisponivelException</text>
+
+  <!-- ============ Legenda ============ -->
+  <text class="legT" x="40" y="400">LEGENDA</text>
+  <line class="div" x1="40" y1="410" x2="340" y2="410"/>
+
+  <line class="linha" x1="40" y1="440" x2="86" y2="440"/>
+  <polygon class="tri" points="100,440 86,431 86,449"/>
+  <text class="leg" x="116" y="444">herança (extends)</text>
+
+  <line class="trac" x1="40" y1="476" x2="86" y2="476"/>
+  <polygon class="tri" points="100,476 86,467 86,485"/>
+  <text class="leg" x="116" y="480">implementação (implements)</text>
+
+  <line class="linha" x1="40" y1="512" x2="72" y2="512"/>
+  <polygon class="diam" points="100,512 86,505 72,512 86,519"/>
+  <text class="leg" x="116" y="516">composição (tem um)</text>
+
+  <line class="trac" x1="40" y1="548" x2="98" y2="548"/>
+  <polyline class="linha" points="90,542 100,548 90,554"/>
+  <text class="leg" x="116" y="552">dependência (usa)</text>
+
+  <text class="leg abst" x="40" y="592" style="fill:#D9A441">itálico</text>
+  <text class="leg" x="88" y="592">= abstrato</text>
+  <text class="leg estat" x="176" y="592">sublinhado</text>
+  <text class="leg" x="248" y="592">= estático</text>
+  <text class="leg" x="40" y="614">- privado</text>
+  <text class="leg" x="176" y="614">+ público</text>
+
+  <!-- ============ Vendavel ============ -->
+  <text class="pac" x="450" y="26">ESTOQUE.PRODUTOS</text>
+  <rect class="caixa" x="450" y="40" width="300" height="92"/>
+  <rect class="topo" x="451" y="41" width="298" height="47"/>
+  <text class="este" x="600" y="58" text-anchor="middle">«INTERFACE»</text>
+  <text class="nome" x="600" y="78" text-anchor="middle">Vendavel</text>
+  <line class="div" x1="450" y1="88" x2="750" y2="88"/>
+  <line class="div" x1="450" y1="100" x2="750" y2="100"/>
+  <text class="membro" x="464" y="120">+ vender(int) : void</text>
+
+  <!-- implementação: Product ..|> Vendavel -->
+  <polygon class="tri" points="600,132 591,146 609,146"/>
+  <line class="trac" x1="600" y1="146" x2="600" y2="190"/>
+  <text class="rot" x="610" y="174">implements</text>
+
+  <!-- ============ Product ============ -->
+  <rect class="caixa" x="420" y="190" width="360" height="232"/>
+  <rect class="topo" x="421" y="191" width="358" height="47"/>
+  <text class="este" x="600" y="208" text-anchor="middle">«ABSTRACT»</text>
+  <text class="nome abst" x="600" y="228" text-anchor="middle">Product</text>
+  <line class="div" x1="420" y1="238" x2="780" y2="238"/>
+  <text class="membro" x="434" y="258">- nome : String</text>
+  <text class="membro" x="434" y="278">- preco : double</text>
+  <text class="membro" x="434" y="298">- quantidade : int</text>
+  <line class="div" x1="420" y1="310" x2="780" y2="310"/>
+  <text class="membro abst" x="434" y="330">+ calcularValorTotal() : double</text>
+  <text class="membro" x="434" y="350">+ getDescricao() : String</text>
+  <text class="membro" x="434" y="370">+ vender(int) : void</text>
+  <text class="membro" x="434" y="390">+ aplicarDesconto(double) : void</text>
+  <text class="membro" x="434" y="410">+ aplicarDesconto(double, double) : void</text>
+
+  <!-- herança: subclasses -> Product -->
+  <polygon class="tri" points="600,422 591,436 609,436"/>
+  <line class="linha" x1="600" y1="436" x2="600" y2="470"/>
+  <line class="linha" x1="460" y1="470" x2="745" y2="470"/>
+  <line class="linha" x1="460" y1="470" x2="460" y2="510"/>
+  <line class="linha" x1="745" y1="470" x2="745" y2="510"/>
+
+  <!-- ProdutoComum -->
+  <rect class="caixa" x="340" y="510" width="240" height="80"/>
+  <rect class="topo" x="341" y="511" width="238" height="35"/>
+  <text class="nome" x="460" y="534" text-anchor="middle">ProdutoComum</text>
+  <line class="div" x1="340" y1="546" x2="580" y2="546"/>
+  <line class="div" x1="340" y1="558" x2="580" y2="558"/>
+  <text class="membro" x="354" y="578">+ calcularValorTotal() : double</text>
+
+  <!-- ProdutoPerecivel -->
+  <rect class="caixa" x="620" y="510" width="250" height="120"/>
+  <rect class="topo" x="621" y="511" width="248" height="35"/>
+  <text class="nome" x="745" y="534" text-anchor="middle">ProdutoPerecivel</text>
+  <line class="div" x1="620" y1="546" x2="870" y2="546"/>
+  <text class="membro" x="634" y="566">- diasParaVencer : int</text>
+  <line class="div" x1="620" y1="578" x2="870" y2="578"/>
+  <text class="membro" x="634" y="598">+ calcularValorTotal() : double</text>
+  <text class="membro" x="634" y="618">+ getDescricao() : String</text>
+
+  <!-- ============ EstoqueApp ============ -->
+  <text class="pac" x="880" y="26">ESTOQUE</text>
+  <rect class="caixa" x="880" y="40" width="310" height="80"/>
+  <rect class="topo" x="881" y="41" width="308" height="35"/>
+  <text class="nome" x="1035" y="64" text-anchor="middle">EstoqueApp</text>
+  <line class="div" x1="880" y1="76" x2="1190" y2="76"/>
+  <line class="div" x1="880" y1="88" x2="1190" y2="88"/>
+  <text class="membro estat" x="894" y="108">+ main(String[]) : void</text>
+
+  <!-- dependência: EstoqueApp -> Estoque -->
+  <line class="trac" x1="1035" y1="120" x2="1035" y2="188"/>
+  <polyline class="linha" points="1029,180 1035,190 1041,180"/>
+  <text class="rot" x="1045" y="160">usa</text>
+
+  <!-- ============ Estoque ============ -->
+  <rect class="caixa" x="880" y="190" width="310" height="140"/>
+  <rect class="topo" x="881" y="191" width="308" height="35"/>
+  <text class="nome" x="1035" y="214" text-anchor="middle">Estoque</text>
+  <line class="div" x1="880" y1="226" x2="1190" y2="226"/>
+  <text class="membro" x="894" y="246">- produtos : List&lt;Product&gt;</text>
+  <line class="div" x1="880" y1="258" x2="1190" y2="258"/>
+  <text class="membro" x="894" y="278">+ adicionarProduto(Product) : void</text>
+  <text class="membro" x="894" y="298">+ venderProduto(int, int) : void</text>
+  <text class="membro" x="894" y="318">+ calcularValorTotalEstoque() : double</text>
+
+  <!-- composição: Estoque <>-- Product -->
+  <line class="linha" x1="780" y1="250" x2="852" y2="250"/>
+  <polygon class="diam" points="880,250 866,243 852,250 866,257"/>
+  <text class="rot" x="786" y="243">0..*</text>
+  <text class="rot" x="816" y="270" text-anchor="middle">possui</text>
+</svg>
