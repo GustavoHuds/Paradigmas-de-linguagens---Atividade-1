@@ -73,56 +73,9 @@ O projeto tem duas formas de uso:
 
 ## Diagrama de classes
 
-```mermaid
-classDiagram
-    direction LR
-    class Exception
-    class EstoqueException
-    class QuantidadeInvalidaException
-    class ProdutoIndisponivelException
-    Exception <|-- EstoqueException
-    EstoqueException <|-- QuantidadeInvalidaException
-    EstoqueException <|-- ProdutoIndisponivelException
+![Diagrama de classes UML](docs/diagrama-de-classes.png)
 
-    class Vendavel {
-        <<interface>>
-        +vender(int quantidadeDesejada) void
-    }
-    class Product {
-        <<abstract>>
-        -String nome
-        -double preco
-        -int quantidade
-        +calcularValorTotal()* double
-        +getDescricao() String
-        +vender(int quantidadeDesejada) void
-        +aplicarDesconto(double percentual) void
-        +aplicarDesconto(double percentual, double descontoMaximo) void
-    }
-    class ProdutoComum {
-        +calcularValorTotal() double
-    }
-    class ProdutoPerecivel {
-        -int diasParaVencer
-        +calcularValorTotal() double
-        +getDescricao() String
-    }
-    class Estoque {
-        -List~Product~ produtos
-        +adicionarProduto(Product p) void
-        +venderProduto(int indice, int quantidade) void
-        +calcularValorTotalEstoque() double
-    }
-    class EstoqueApp {
-        +main(String[] args)$ void
-    }
-
-    Vendavel <|.. Product
-    Product <|-- ProdutoComum
-    Product <|-- ProdutoPerecivel
-    Estoque o-- "0..*" Product : tem uma lista de
-    EstoqueApp ..> Estoque : usa
-```
+<sub>Fonte vetorial: [`docs/diagrama-de-classes.svg`](docs/diagrama-de-classes.svg)</sub>
 
 ---
 
